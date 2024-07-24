@@ -690,4 +690,11 @@ input {
         flex-direction: column;
         align-items: center;
     }
+
+    .QR{
+        display: flex;
+        background-color: bisque;
+        align-items: center;
+        justify-content: center;
+    }
 }
