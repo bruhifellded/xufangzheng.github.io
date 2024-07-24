@@ -495,7 +495,7 @@ input {
 
     .Left_Content {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         margin: 2.5% 2.5% 2.5% 0%;
         flex: 90%;
         background-color: red;
