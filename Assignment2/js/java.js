@@ -69,6 +69,7 @@ function selection(content_bar, Desc, pgno, styling) {
     for (var i = 0; i < content_bar.length; i++) {
         console.log(pgno);
         console.log(i);
+        //if pgno is same as i then mean choosen
         if (pgno == i) {
 
             content_bar[i].classList.remove("none");
@@ -78,7 +79,7 @@ function selection(content_bar, Desc, pgno, styling) {
             // Desc[i].classList.remove('Sector');
             // Desc[i].classList.add('Sector_Selected');
         } else {
-
+            //else remove
             content_bar[i].classList.remove("selected");
             content_bar[i].classList.add("none");
             Desc[i].classList.remove('active');
@@ -214,7 +215,7 @@ const hamberger_menu = document.querySelector(".Hamberger_menu");
 const mobile_nav = document.querySelector(".Mobile_nav");
 
 function MenuColorChange() {
-
+    //change the color
     window.addEventListener('scroll', function () {
         IfScroll(nav);
     });
@@ -222,15 +223,19 @@ function MenuColorChange() {
 }
 
 function IfScroll(navigation) {
+    //if window is scroll make nav solid
     if (window.scrollY > 0) {
         navigation.classList.add('solid-bg');
     }
     // else if (window.scrollY <= 0 && window.innerWidth < 800 && !mobile_nav.classList.contains('Sector')) {
 
     // }
+    //if this happen do nothing
     else if (mobile_nav.classList.contains('Sector') == false && window.innerWidth < 800) {
 
-    } else {
+    }
+    //else remove the solid make it hollow
+    else {
         navigation.classList.remove('solid-bg');
     }
 }
@@ -240,11 +245,14 @@ function IfScroll(navigation) {
 
 function Show_menu() {
 
+    //if menue pressed the nav solid
     if (mobile_nav.classList.contains('Sector') == true) {
         mobile_nav.classList.remove('Sector');
         nav.classList.add('solid-bg');
+        //else the hamberger menu is not pressed
     } else if (mobile_nav.classList.contains('Sector') == false) {
         mobile_nav.classList.add('Sector');
+        //and also its not scrolled
         if (window.scrollY <= 0) {
             nav.classList.remove('solid-bg');
         }
@@ -273,10 +281,14 @@ const inners = document.querySelectorAll(".cards_inner");
 const front = document.querySelectorAll(".cards_front");
 const back = document.querySelectorAll(".cards_back");
 
+//need for js validation
 for (let i = 0; i < cards.length; i++) {
     (function (i) {
+        //when pressed flip the card 180
         cards[i].addEventListener('click', function () {
+            //if statment if it fliped or not
             if (inners[i].style.transform == 'rotateY(180deg)') {
+                //to change the opicity
                 inners[i].style.transform = 'rotateY(0deg)';
                 back[i].style.opacity = "0";
                 back[i].style.display = 'none';
@@ -300,16 +312,21 @@ const reset_button = document.querySelector('#Reset');
 const quiz_sfx = document.querySelectorAll('.guess_sfx > audio');
 
 function quiz_answer() {
+    //see the difrentce
     let diffrence = 1804 - (1.0 * guess.value);
+    //if no diffrence you correct
     if (diffrence == 0) {
         //play a sound
         quiz_sfx[0].play();
         diff.innerHTML = "You are Correct";
     }
+    //higher
     else if (diffrence > 0) {
+        //play a sound
         quiz_sfx[1].play();
         diff.innerHTML = "You are " + diffrence + " years more";
     }
+    //lower
     else if (diffrence < 0) {
         quiz_sfx[1].play();
         diff.innerHTML = "You are " + Math.abs(diffrence) + " years less";
@@ -317,6 +334,7 @@ function quiz_answer() {
 }
 
 quiz_button.addEventListener('click', function (event) {
+    //so no refreash page when submit
     event.preventDefault();
     quiz_answer();
     form.style.display = 'none';
@@ -324,11 +342,10 @@ quiz_button.addEventListener('click', function (event) {
 });
 
 reset_button.addEventListener('click', function () {
-    // Reset the input field
+    // Reset value
     guess.value = "0";
-    // Hide the result
+    // change back
     result.style.display = 'none';
-    // Show the form
     form.style.display = 'block';
 });
 
@@ -336,9 +353,11 @@ const sound = document.querySelectorAll(".panel > audio");
 const soundbuttomn = document.querySelectorAll(".controll_button");
 for (let i = 0; i < sound.length; i++) {
     (function (i) {
+        //music play to button press
         soundbuttomn[i].addEventListener('click', function () {
             if (!sound[i].paused) {
                 sound[i].pause();
+                //reset sound to zero
                 sound[i].currentTime = 0;
                 soundbuttomn[i].classList.remove('playing');
             } else {
@@ -363,25 +382,31 @@ function plus_pic() {
 // }
 
 function show_pic(n) {
+    //change the slides
     let i;
     let backgrounds = document.querySelectorAll('.background-image-container img');
 
+    //if max go to 0
     if (n >= backgrounds.length) {
         slider_index = 0;
     }
+
+    //if go negative go to top
     if (n < 0) {
         slider_index = backgrounds.length - 1;
     }
 
+    //remove everything
     for (i = 0; i < backgrounds.length; i++) {
         backgrounds[i].classList.remove('background-Selected');
     }
     console.log(slider_index);
+    //add it only to the one which is selected
     backgrounds[slider_index].classList.add('background-Selected');
 
 }
 
-setInterval(plus_pic, 6000); // Change image every 2 seconds
+setInterval(plus_pic, 6000); // Change image every 6 seconds
 
 document.addEventListener('DOMContentLoaded', check);
 document.addEventListener('DOMContentLoaded', MenuColorChange);

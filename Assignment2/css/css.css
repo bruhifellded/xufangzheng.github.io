@@ -1,24 +1,25 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-.nav{
+/* nav */
+.nav {
     display: flex;
 
 }
 
-.Hamberger_menu{
+.Hamberger_menu {
     display: none;
 }
 
-.Mobile_nav{
+.Mobile_nav {
     display: none;
 }
 
-.Titles{
+/* title to the side */
+.Titles {
 
     display: flex;
     flex-direction: column;
@@ -34,6 +35,7 @@
     bottom: 0; */
 }
 
+/* title to the side */
 .topnav {
     display: flex;
     flex-direction: row;
@@ -52,32 +54,35 @@
     /* background-image: url("../images/operamask.jpg"); */
 }
 
-.Rightnav > ul{
+/* line up the nav */
+.Rightnav>ul {
     display: flex;
     flex-direction: row;
     gap: 1em;
     justify-content: space-around;
 }
 
-li > img{
+li>img {
     position: relative;
     width: 10%;
     height: 10%;
 }
-ul{
+
+ul {
     list-style-type: none;
 }
 
-.menu{
-padding: 5%;
+.menu {
+    padding: 5%;
 }
 
-.menu:hover{
-    color:white;
+/* hover to make it change color*/
+.menu:hover {
+    color: white;
     text-decoration: underline;
 }
 
-.background-image-container{
+.background-image-container {
     display: flex;
     height: 100vh;
     width: 100%;
@@ -85,7 +90,8 @@ padding: 5%;
     position: relative;
 }
 
-.background{
+/*background base*/
+.background {
     /* display: none; */
     opacity: 0;
     z-index: -3;
@@ -96,7 +102,8 @@ padding: 5%;
     position: absolute;
 }
 
-.background-Selected{
+/* change background from nothing to slected*/
+.background-Selected {
     display: flex;
     position: absolute;
     opacity: 1;
@@ -104,19 +111,19 @@ padding: 5%;
     object-fit: cover;
     height: 100%;
     width: 100%;
-    
+
 }
 
-.Content{
+.Content {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     background-color: rgb(223, 156, 0);
     padding-left: 2.5%;
-    
+
 }
 
-.Left_Content{
+.Left_Content {
     display: flex;
     flex-direction: column;
     margin: 2.5% 2.5% 2.5% 0%;
@@ -128,26 +135,27 @@ padding: 5%;
 
 }
 
-.Left_Content > p{
+.Left_Content>p {
     padding-top: 5%;
     padding-bottom: 5%;
-    height:100%;
+    height: 100%;
     margin: 2.5%;
 }
 
-    .selected{
-        background-color: black;
-        color: white;
-        background: linear-gradient(to left top , yellow ,orange );
-    }
-    
-    .hover{
-        background-color: black;
-        color: white;
-        background: linear-gradient(to left top , yellow , orange);
-    }
+/* To see which content is slected and give it a color */
+.selected {
+    background-color: black;
+    color: white;
+    background: linear-gradient(to left top, yellow, orange);
+}
 
-.Description{
+.hover {
+    background-color: black;
+    color: white;
+    background: linear-gradient(to left top, yellow, orange);
+}
+
+.Description {
     /* display: flex;
     flex-direction: row; */
     margin: 2.5% 2.5% 2.5% 0%;
@@ -157,7 +165,7 @@ padding: 5%;
     border-radius: 5%;
 }
 
-.Title_Content{
+.Title_Content {
     display: flex;
     flex-direction: row;
     margin: 2.5% 2.5% 0% 0%;
@@ -165,7 +173,7 @@ padding: 5%;
     background-color: rgb(223, 156, 0);
 }
 
-.Container_Content{
+.Container_Content {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -173,6 +181,7 @@ padding: 5%;
     flex: 100%;
     background-color: rgb(223, 156, 0);
 }
+
 
 .solid-bg {
     background-color: rgba(192, 192, 192, 1)
@@ -190,11 +199,12 @@ padding: 5%;
     height: auto;
 }
 
-.Sector_Selected{
+.Sector_Selected {
     display: block;
 }
 
-.cards{
+/* cards  */
+.cards {
     display: flex;
     flex: 40%;
     background-color: transparent;
@@ -207,7 +217,8 @@ padding: 5%;
     perspective: 1000px;
 }
 
-.cards_inner{
+/* cards content*/
+.cards_inner {
     position: relative;
     width: 100%;
     height: 100%;
@@ -222,46 +233,49 @@ padding: 5%;
     height:100%;
 } */
 
+/* cards front back*/
 .cards_front {
     background-color: #bbb;
     color: black;
     position: absolute;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     /* backface-visibility: hidden; */
-  }
-  
-  .cards_front img{
+}
+
+.cards_front img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  .cards_back {
+}
+
+.cards_back {
     /* background-color: #2980b9; */
     background-color: transparent;
     color: white;
     transform: rotateY(180deg);
     position: absolute;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     backface-visibility: hidden;
-  }
+}
 
-  .cards_back iframe {
+.cards_back iframe {
     width: 100%;
     height: 50%;
     /* flex-grow: 1; */
     border: none;
 }
 
-  .panel{
+/* controll pannel for minigame */
+.panel {
     min-height: 100vh;
     width: auto;
-    margin:2.5% 2.5% 2.5% 0;
+    margin: 2.5% 2.5% 2.5% 0;
     background-color: antiquewhite;
-  }
-  
-  .audio_controll{
+}
+
+.audio_controll {
     margin: 2.5% 2.5% 2.5% 0%;
     display: flex;
     flex-wrap: wrap;
@@ -269,9 +283,10 @@ padding: 5%;
     background-color: red;
     padding: 2.5%;
     border-radius: 5%;
-  }
+}
 
-  .controll_button{
+/* controll pannel button to play sound */
+.controll_button {
     padding: 5%;
     margin: 5%;
     height: 3em;
@@ -280,57 +295,57 @@ padding: 5%;
     text-align: center;
     background-color: rgb(187, 246, 232);
     opacity: 0.2;
-  }
+}
 
-    .playing{
-        opacity: 1; 
-    }
+.playing {
+    opacity: 1;
+}
 
-    .quiz{
-        background-color: rgb(223, 156, 0);
-        padding-bottom: 5%;
-    }
+.quiz {
+    background-color: rgb(223, 156, 0);
+    padding-bottom: 5%;
+}
 
-    .quiz_title{
-        margin: 0% 0% 0% 2.5%;
-    }
-  
-    
-    .Form {
-        align-items: center;
-        margin-left: 10%;
-        margin-right: 10%;
-        background-color: rgb(203, 95, 0);
-        padding: 5%;
-    }
-    
-    form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-    }
-    
-    label {
-        margin-bottom: 10px;
-        text-align: center;
-    }
-    
-    input {
-        margin-bottom: 10px;
-        padding: 5px;
-        text-align: center;
-        
-    }
+.quiz_title {
+    margin: 0% 0% 0% 2.5%;
+}
 
-    .result{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 
-@media screen and (max-width:800px){
-    .Titles{
+.Form {
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: rgb(203, 95, 0);
+    padding: 5%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+label {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 5px;
+    text-align: center;
+
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width:800px) {
+    .Titles {
 
         display: flex;
         flex-direction: column;
@@ -346,40 +361,42 @@ padding: 5%;
         top: 0;
         bottom: 0; */
     }
-    
-    .nav{
+
+    .nav {
         display: flex;
-        width:100%;
+        width: 100%;
     }
 
-    .Mobile_nav{
+    .Mobile_nav {
 
-        display: flex   ;
-        width:100%;
-        flex-direction: column; 
-        
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+
     }
 
-    .Mobile_nav > ul > li{
+    .Mobile_nav>ul>li {
 
         display: block;
         /* flex-direction: column; */
-        width:100%;
+        width: 100%;
         padding: 2.5%;
-        
-        
+
+
     }
 
     .Hamberger_menu {
         display: flex;
-        justify-content: center; /* Center align the hamburger menu */
-        align-items: center; /* Center align the hamburger menu vertically */
+        justify-content: center;
+        /* Center align the hamburger menu */
+        align-items: center;
+        /* Center align the hamburger menu vertically */
         position: relative;
         flex-direction: row-reverse;
     }
 
 
-    .Hamberger_menu > img{
+    .Hamberger_menu>img {
         /* position: relative; */
         width: 20%;
     }
@@ -394,59 +411,59 @@ padding: 5%;
         width: 100%;
         z-index: 3;
         transition: background-color 0.3s;
-        padding:0;
+        padding: 0;
     }
-    
-    .Leftnav ul{
+
+    .Leftnav ul {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
     }
 
-    .Leftnav ul li{
+    .Leftnav ul li {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        
+
         /* background-image: url("../images/operamask.jpg"); */
     }
-    
-    .Rightnav > ul{
+
+    .Rightnav>ul {
         /* display: flex;
         flex-direction: row;
         gap: 2em;
         justify-content: space-around; */
         display: none;
     }
-    
-    li > img{
+
+    li>img {
         position: relative;
         width: 10%;
         height: 10%;
     }
 
-    
-    .menu{
-    padding-top: 5%;
-    padding-bottom: 5%;
+
+    .menu {
+        padding-top: 5%;
+        padding-bottom: 5%;
     }
-    
-    .menu:hover{
-        color:white;
+
+    .menu:hover {
+        color: white;
         text-decoration: underline;
     }
-    
-    .background-image-container{
+
+    .background-image-container {
         display: flex;
         height: 100vh;
         width: 100%;
         overflow: hidden;
         position: relative;
     }
-    
-    .background{
+
+    .background {
         /* display: none; */
         opacity: 0;
         z-index: -3;
@@ -456,8 +473,8 @@ padding: 5%;
         width: 100%;
         position: absolute;
     }
-    
-    .background-Selected{
+
+    .background-Selected {
         display: flex;
         position: absolute;
         opacity: 1;
@@ -465,48 +482,48 @@ padding: 5%;
         object-fit: cover;
         height: 100%;
         width: 100%;
-        
+
     }
-    
-    .Content{
+
+    .Content {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         background-color: rgb(223, 156, 0);
         padding-left: 2.5%;
     }
-    
-    .Left_Content{
+
+    .Left_Content {
         display: flex;
         flex-direction: row;
         margin: 2.5% 2.5% 2.5% 0%;
         flex: 95%;
         background-color: red;
         font-size: 20px;
-        gap:2.5%;
-        
-    
-    }
-    
-    .Left_Content > p{
-        padding: 5%;
-        height:100%;
-        margin: 0%;
-    }
-    
-    .selected{
-        background-color: black;
-        color: white;
-        background: linear-gradient(to left top , yellow ,orange );
-    }
-    
-    .hover{
-        background-color: black;
-        color: white;
-        background: linear-gradient(to left top , yellow , orange);
+        gap: 2.5%;
+
+
     }
 
-    .Description{
+    .Left_Content>p {
+        padding: 5%;
+        height: 100%;
+        margin: 0%;
+    }
+
+    .selected {
+        background-color: black;
+        color: white;
+        background: linear-gradient(to left top, yellow, orange);
+    }
+
+    .hover {
+        background-color: black;
+        color: white;
+        background: linear-gradient(to left top, yellow, orange);
+    }
+
+    .Description {
         /* display: flex;
         flex-direction: row; */
         margin: 2.5% 2.5% 2.5% 0%;
@@ -516,16 +533,16 @@ padding: 5%;
         border-radius: 5%;
         min-height: 500px;
     }
-    
-    .Title_Content{
+
+    .Title_Content {
         display: flex;
         flex-direction: row;
         margin: 2.5% 2.5% 0% 0%;
         flex: 100%;
         background-color: rgb(223, 156, 0);
     }
-    
-    .Container_Content{
+
+    .Container_Content {
         display: flex;
         flex-direction: column;
         margin: 2.5% 2.5% 0% 0%;
@@ -536,16 +553,16 @@ padding: 5%;
     .solid-bg {
         background-color: rgba(192, 192, 192, 1)
     }
-    
-    .Sector{
+
+    .Sector {
         display: none;
     }
-    
-    .Sector_Selected{
+
+    .Sector_Selected {
         display: block;
     }
-    
-    .cards{
+
+    .cards {
         background-color: transparent;
         width: 90%;
         /* margin: 2.5%; */
@@ -553,7 +570,7 @@ padding: 5%;
         flex: 90%;
     }
 
-    .cards_inner{
+    .cards_inner {
         position: relative;
         width: 100%;
         height: 100%;
@@ -573,37 +590,37 @@ padding: 5%;
         background-color: #bbb;
         color: black;
         position: absolute;
-        width:100%;
-        height:100%;
-        object-fit: cover;
-        /* backface-visibility: hidden; */
-      }
-      
-      .cards_front img{
         width: 100%;
         height: 100%;
         object-fit: cover;
-      }
-      
-      .cards_back {
+        /* backface-visibility: hidden; */
+    }
+
+    .cards_front img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .cards_back {
         /* background-color: #2980b9; */
         background-color: transparent;
         color: white;
         transform: rotateY(180deg);
         position: absolute;
-        width:100%;
-        height:100%;
+        width: 100%;
+        height: 100%;
         backface-visibility: hidden;
-      }
+    }
 
-      .panel{
+    .panel {
         min-height: 100vh;
         width: auto;
-        margin:2.5% 2.5% 2.5% 0;
+        margin: 2.5% 2.5% 2.5% 0;
         background-color: antiquewhite;
-      }
-      
-      .audio_controll{
+    }
+
+    .audio_controll {
         margin: 2.5% 2.5% 2.5% 0%;
         display: flex;
         flex-wrap: wrap;
@@ -611,9 +628,9 @@ padding: 5%;
         background-color: red;
         padding: 2.5%;
         border-radius: 5%;
-      }
+    }
 
-      .controll_button{
+    .controll_button {
         padding: 5%;
         margin: 5%;
         height: 3em;
@@ -622,48 +639,48 @@ padding: 5%;
         text-align: center;
         background-color: rgb(187, 246, 232);
         opacity: 0.2;
-      }
-
-      .playing{
-        opacity: 1; 
     }
 
-    .quiz{
+    .playing {
+        opacity: 1;
+    }
+
+    .quiz {
         background-color: rgb(223, 156, 0);
         padding-bottom: 5%;
     }
 
-    .quiz_title{
+    .quiz_title {
         margin: 0% 0% 0% 2.5%;
     }
-  
-    
+
+
     .Form {
         align-items: center;
         margin-left: 10%;
         margin-right: 10%;
         background-color: rgb(203, 95, 0);
     }
-    
+
     form {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    
+
     label {
         margin-bottom: 10px;
         text-align: center;
     }
-    
+
     input {
         margin-bottom: 10px;
         padding: 5px;
         text-align: center;
-        
+
     }
 
-    .result{
+    .result {
         display: flex;
         flex-direction: column;
         align-items: center;
